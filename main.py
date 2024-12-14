@@ -9,10 +9,9 @@ map = folium.Map(
 )
 
 # слои карты
-folium.TileLayer('CartoDB.Voyager').add_to(map)
+folium.TileLayer('OpenStreetMap').add_to(map)
 folium.TileLayer('CyclOSM').add_to(map)
 folium.TileLayer('Esri.WorldImagery').add_to(map)
-folium.TileLayer('OpenStreetMap').add_to(map)
 
 # координаты улиц
 lenina_coordinates = [
@@ -42,36 +41,64 @@ krulova_coordinates = [
     [53.728401, 91.451785],
     [53.728714, 91.454590],
 ]
+chertigasheva_coordinates = [
+    [53.723706, 91.431490],
+    [53.723808, 91.432518],
+    [53.724108, 91.435558],
+    [53.724206, 91.436697],
+    [53.724223, 91.436802],
+    [53.724372, 91.437974],
+    [53.724412, 91.438316],
+    [53.724660, 91.440872],
+    [53.724754, 91.441700],
+    [53.724843, 91.442738],
+    [53.724854, 91.442893],
+    [53.724857, 91.442936],
+    [53.725037, 91.445045],
+    [53.725465, 91.449354],
+    [53.725606, 91.450948],
+    [53.725824, 91.453085],
+    [53.725840, 91.453251],
+    [53.725965, 91.454592],
+    [53.726027, 91.455169],
+    [53.727406, 91.470149],
+    [53.727426, 91.470695],
+    [53.727422, 91.471099]
+]
 
 # линии улиц
 # color #FFD30C,#D2B48C,#F0E68C. #ff3300
 html_lenina = '''<h1>Проспект Ленина</h1>
-              <img src="https://www.on-walking.com/files/abakan/011.jpg" width="150px" height="100px">  '''
+              <img src="https://www.on-walking.com/files/abakan/011.jpg" width="300px" height="200px">  '''
 html_shetinkina = '''<h1>Улица Щетинкина</h1>
-              <img src="https://i3.photo.2gis.com/main/branch/69/70000001040677149/common" width="150px" height="100px">  '''
+              <img src="https://i3.photo.2gis.com/main/branch/69/70000001040677149/common" width="300px" height="200px">  '''
 folium.PolyLine(
     locations=lenina_coordinates,
-    color="#F0E68C",
+    color="#ff5200",
     weight=5,
     tooltip="Проспект Ленина",
-    line_cap="square", # предложение
     popup=html_lenina, # предложение добавить popup
 ).add_to(map)
 folium.PolyLine(
     locations=shetinkina_coordinates,
-    color="#F0E68C",
+    color="#ff5200",
     weight=5,
     tooltip="Улица Щетинкина",
-    line_cap="square", # предложение
     popup=html_shetinkina, # предложение добавить popup
 ).add_to(map)
 folium.PolyLine(
     locations=krulova_coordinates,
-    color="#F0E68C",
+    color="#ff5200",
     weight=5,
     tooltip="Улица Крылова?",
-    line_cap="square", # предложение
     popup="Улица Крылова?", # предложение добавить popup
+).add_to(map)
+folium.PolyLine(
+    locations=chertigasheva_coordinates,
+    color="#ff5200",
+    weight=5,
+    tooltip="Улица Чертыгашева",
+    popup="Улица Чертыгашева", # предложение добавить popup
 ).add_to(map)
 
 # Тестовые маркеры для карты
