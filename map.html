@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e72bda450626a49a495d0e4345cc76e9 {
+                #map_b705aa31b19976cd93b8e0aa66bdf3dd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_e72bda450626a49a495d0e4345cc76e9" ></div>
+            <div class="folium-map" id="map_b705aa31b19976cd93b8e0aa66bdf3dd" ></div>
         
 </body>
 <script>
     
     
-            var map_e72bda450626a49a495d0e4345cc76e9 = L.map(
-                "map_e72bda450626a49a495d0e4345cc76e9",
+            var map_b705aa31b19976cd93b8e0aa66bdf3dd = L.map(
+                "map_b705aa31b19976cd93b8e0aa66bdf3dd",
                 {
                     center: [53.722279, 91.443704],
                     crs: L.CRS.EPSG3857,
@@ -56,49 +56,171 @@
                     attributionControl: 0,
                 }
             );
-            L.control.scale().addTo(map_e72bda450626a49a495d0e4345cc76e9);
 
             
 
         
     
-            var tile_layer_48f98af37b54b6a7b05467d29f7de6d8 = L.tileLayer(
+            var tile_layer_80e07240d6dd17b71d80bce8fcce6709 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_48f98af37b54b6a7b05467d29f7de6d8.addTo(map_e72bda450626a49a495d0e4345cc76e9);
+            tile_layer_80e07240d6dd17b71d80bce8fcce6709.addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
         
     
-            var marker_925322a73b067011a6570e6f9356d2c0 = L.marker(
-                [53.721565, 91.436445],
-                {}
-            ).addTo(map_e72bda450626a49a495d0e4345cc76e9);
-        
-    
-            var icon_0c39cf70c627cc5a9463c98d670e513b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "seedling", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            var tile_layer_de483869708b46d59976ea7fe6444733 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
-            marker_925322a73b067011a6570e6f9356d2c0.setIcon(icon_0c39cf70c627cc5a9463c98d670e513b);
         
     
-        var popup_9833d99d228921c92a7f07cec3617fae = L.popup({"maxWidth": "100%"});
+            tile_layer_de483869708b46d59976ea7fe6444733.addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+            var tile_layer_8121c3d070f0168968a25a5b2b21e4fb = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_8121c3d070f0168968a25a5b2b21e4fb.addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+            var tile_layer_9e666c09f43eb17d7b4b2e00d726489c = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_9e666c09f43eb17d7b4b2e00d726489c.addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+            var tile_layer_32e0859297b17676178c5c0d8f36e9b7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_32e0859297b17676178c5c0d8f36e9b7.addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+            var poly_line_9160bc2666bf3290da1484e1fa7e4a84 = L.polyline(
+                [[53.7211, 91.4333], [53.722755, 91.4495], [53.723056, 91.4539], [53.7234, 91.4565]],
+                {"bubblingMouseEvents": true, "color": "#F0E68C", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F0E68C", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "square", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+        var popup_c30e3cc5a56d0c3ec787d69d75901f82 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_ca9b2532d130d18340136e6ee1b4a511 = $(`<div id="html_ca9b2532d130d18340136e6ee1b4a511" style="width: 100.0%; height: 100.0%;">Тест1</div>`)[0];
-                popup_9833d99d228921c92a7f07cec3617fae.setContent(html_ca9b2532d130d18340136e6ee1b4a511);
+                var html_00655dc4b6c1639466fff95ae856644e = $(`<div id="html_00655dc4b6c1639466fff95ae856644e" style="width: 100.0%; height: 100.0%;"><h1>Проспект Ленина</h1>               <img src="https://www.on-walking.com/files/abakan/011.jpg" width="150px" height="100px">  </div>`)[0];
+                popup_c30e3cc5a56d0c3ec787d69d75901f82.setContent(html_00655dc4b6c1639466fff95ae856644e);
             
         
 
-        marker_925322a73b067011a6570e6f9356d2c0.bindPopup(popup_9833d99d228921c92a7f07cec3617fae)
+        poly_line_9160bc2666bf3290da1484e1fa7e4a84.bindPopup(popup_c30e3cc5a56d0c3ec787d69d75901f82)
         ;
 
         
     
     
-            marker_925322a73b067011a6570e6f9356d2c0.bindTooltip(
+            poly_line_9160bc2666bf3290da1484e1fa7e4a84.bindTooltip(
+                `<div>
+                     Проспект Ленина
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a4e276dfe393b221002e772a8722c045 = L.polyline(
+                [[53.726186, 91.44252], [53.734935, 91.43993], [53.733805, 91.440309], [53.727508, 91.442126], [53.7248349, 91.442895], [53.724819, 91.442882], [53.722302, 91.44362], [53.717319, 91.445112]],
+                {"bubblingMouseEvents": true, "color": "#F0E68C", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F0E68C", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "square", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+        var popup_014a0adb91b1fc47883c9274d103ded1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55b60ab69c6bb4c694813ea4b6813abd = $(`<div id="html_55b60ab69c6bb4c694813ea4b6813abd" style="width: 100.0%; height: 100.0%;"><h1>Улица Щетинкина</h1>               <img src="https://i3.photo.2gis.com/main/branch/69/70000001040677149/common" width="150px" height="100px">  </div>`)[0];
+                popup_014a0adb91b1fc47883c9274d103ded1.setContent(html_55b60ab69c6bb4c694813ea4b6813abd);
+            
+        
+
+        poly_line_a4e276dfe393b221002e772a8722c045.bindPopup(popup_014a0adb91b1fc47883c9274d103ded1)
+        ;
+
+        
+    
+    
+            poly_line_a4e276dfe393b221002e772a8722c045.bindTooltip(
+                `<div>
+                     Улица Щетинкина
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bfa66184e9e5b571dade0f2fc82d65a7 = L.polyline(
+                [[53.727555, 91.442118], [53.727555, 91.442118], [53.727828, 91.444923], [53.727933, 91.446023], [53.727982, 91.447034], [53.728177, 91.449259], [53.728379, 91.451564], [53.728401, 91.451785], [53.728714, 91.45459]],
+                {"bubblingMouseEvents": true, "color": "#F0E68C", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F0E68C", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "square", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+        var popup_0a08d3f3e6053e3c050d547e65e9d85e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_182c20d3f37a0ace1ee7ad135fc0ea10 = $(`<div id="html_182c20d3f37a0ace1ee7ad135fc0ea10" style="width: 100.0%; height: 100.0%;">Улица Крылова?</div>`)[0];
+                popup_0a08d3f3e6053e3c050d547e65e9d85e.setContent(html_182c20d3f37a0ace1ee7ad135fc0ea10);
+            
+        
+
+        poly_line_bfa66184e9e5b571dade0f2fc82d65a7.bindPopup(popup_0a08d3f3e6053e3c050d547e65e9d85e)
+        ;
+
+        
+    
+    
+            poly_line_bfa66184e9e5b571dade0f2fc82d65a7.bindTooltip(
+                `<div>
+                     Улица Крылова?
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e07a21a32e0f1649f1b03548a17317c = L.marker(
+                [53.721565, 91.436445],
+                {}
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+        
+    
+            var icon_d568e2609241b033f40248160e40b943 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "seedling", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0e07a21a32e0f1649f1b03548a17317c.setIcon(icon_d568e2609241b033f40248160e40b943);
+        
+    
+        var popup_3cbbb87db114dce1e4a7b996cf32df2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d55780d2f92d33dc282c0aa48052e033 = $(`<div id="html_d55780d2f92d33dc282c0aa48052e033" style="width: 100.0%; height: 100.0%;">Тест1</div>`)[0];
+                popup_3cbbb87db114dce1e4a7b996cf32df2c.setContent(html_d55780d2f92d33dc282c0aa48052e033);
+            
+        
+
+        marker_0e07a21a32e0f1649f1b03548a17317c.bindPopup(popup_3cbbb87db114dce1e4a7b996cf32df2c)
+        ;
+
+        
+    
+    
+            marker_0e07a21a32e0f1649f1b03548a17317c.bindTooltip(
                 `<div>
                      Иконка 1
                  </div>`,
@@ -106,34 +228,34 @@
             );
         
     
-            var marker_335d2cc4a6ee8d79d562115a3496640d = L.marker(
+            var marker_d62e669c9961d19f17992656b82e982a = L.marker(
                 [53.721978, 91.440966],
                 {}
-            ).addTo(map_e72bda450626a49a495d0e4345cc76e9);
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
         
     
-            var icon_5fb3efc027f3492216b3c087edd122a3 = L.AwesomeMarkers.icon(
+            var icon_db9f99660dc53d96bb3d3bfaa50bbccf = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "seedling", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_335d2cc4a6ee8d79d562115a3496640d.setIcon(icon_5fb3efc027f3492216b3c087edd122a3);
+            marker_d62e669c9961d19f17992656b82e982a.setIcon(icon_db9f99660dc53d96bb3d3bfaa50bbccf);
         
     
-        var popup_401f5245d3c0beeff937b65fff2ce50b = L.popup({"maxWidth": "100%"});
+        var popup_a18e662d7f71da3be900706e8de0f061 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_e7a54f0beecc9f6c0369bd64b1fc80c6 = $(`<div id="html_e7a54f0beecc9f6c0369bd64b1fc80c6" style="width: 100.0%; height: 100.0%;">Тест2</div>`)[0];
-                popup_401f5245d3c0beeff937b65fff2ce50b.setContent(html_e7a54f0beecc9f6c0369bd64b1fc80c6);
+                var html_3b7d3a8e64c31f69de669922aed12755 = $(`<div id="html_3b7d3a8e64c31f69de669922aed12755" style="width: 100.0%; height: 100.0%;">Тест2</div>`)[0];
+                popup_a18e662d7f71da3be900706e8de0f061.setContent(html_3b7d3a8e64c31f69de669922aed12755);
             
         
 
-        marker_335d2cc4a6ee8d79d562115a3496640d.bindPopup(popup_401f5245d3c0beeff937b65fff2ce50b)
+        marker_d62e669c9961d19f17992656b82e982a.bindPopup(popup_a18e662d7f71da3be900706e8de0f061)
         ;
 
         
     
     
-            marker_335d2cc4a6ee8d79d562115a3496640d.bindTooltip(
+            marker_d62e669c9961d19f17992656b82e982a.bindTooltip(
                 `<div>
                      Иконка 2
                  </div>`,
@@ -141,39 +263,57 @@
             );
         
     
-            var marker_29095a3cfff04dc119eb2431a19583be = L.marker(
+            var marker_ef7d60802d3b99d3507707dbaaf2b38e = L.marker(
                 [53.722445, 91.445457],
                 {}
-            ).addTo(map_e72bda450626a49a495d0e4345cc76e9);
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
         
     
-            var icon_36b3445e8996a12f907d42fccd54f260 = L.AwesomeMarkers.icon(
+            var icon_6c2efbbaa10166fde720524d8d0479ad = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "seedling", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
             );
-            marker_29095a3cfff04dc119eb2431a19583be.setIcon(icon_36b3445e8996a12f907d42fccd54f260);
+            marker_ef7d60802d3b99d3507707dbaaf2b38e.setIcon(icon_6c2efbbaa10166fde720524d8d0479ad);
         
     
-        var popup_bc95c421317ff9c318388ef285fdaf3c = L.popup({"maxWidth": "100%"});
+        var popup_27a8e4ffc245146feb2ceb7556bf9ddd = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_19b18a59c0022542606a361334920893 = $(`<div id="html_19b18a59c0022542606a361334920893" style="width: 100.0%; height: 100.0%;">Тест3</div>`)[0];
-                popup_bc95c421317ff9c318388ef285fdaf3c.setContent(html_19b18a59c0022542606a361334920893);
+                var html_03987a3df5f59cd46f6fe39f130cf058 = $(`<div id="html_03987a3df5f59cd46f6fe39f130cf058" style="width: 100.0%; height: 100.0%;">Тест3</div>`)[0];
+                popup_27a8e4ffc245146feb2ceb7556bf9ddd.setContent(html_03987a3df5f59cd46f6fe39f130cf058);
             
         
 
-        marker_29095a3cfff04dc119eb2431a19583be.bindPopup(popup_bc95c421317ff9c318388ef285fdaf3c)
+        marker_ef7d60802d3b99d3507707dbaaf2b38e.bindPopup(popup_27a8e4ffc245146feb2ceb7556bf9ddd)
         ;
 
         
     
     
-            marker_29095a3cfff04dc119eb2431a19583be.bindTooltip(
+            marker_ef7d60802d3b99d3507707dbaaf2b38e.bindTooltip(
                 `<div>
                      Иконка 3
                  </div>`,
                 {"sticky": true}
             );
+        
+    
+            var layer_control_ba2960d004d437657d96f7c51ca80f95_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_32e0859297b17676178c5c0d8f36e9b7,
+                    "cartodbvoyager" : tile_layer_de483869708b46d59976ea7fe6444733,
+                    "cyclosm" : tile_layer_8121c3d070f0168968a25a5b2b21e4fb,
+                    "esriworldimagery" : tile_layer_9e666c09f43eb17d7b4b2e00d726489c,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_ba2960d004d437657d96f7c51ca80f95 = L.control.layers(
+                layer_control_ba2960d004d437657d96f7c51ca80f95_layers.base_layers,
+                layer_control_ba2960d004d437657d96f7c51ca80f95_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_b705aa31b19976cd93b8e0aa66bdf3dd);
+
         
 </script>
 </html>
