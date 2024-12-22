@@ -2,16 +2,15 @@ import folium
 
 map = folium.Map(
     location=[53.722279, 91.443704],
-    zoom_start = 16, # Мы оставляем zoom
-    #tiles = 'OpenStreetMap',
-    #control_scale=True,
+    zoom_start = 16,
+    tiles=None,
     attribution_control=0
 )
 
 # слои карты
-folium.TileLayer('OpenStreetMap').add_to(map)
-folium.TileLayer('CyclOSM').add_to(map)
-folium.TileLayer('Esri.WorldImagery').add_to(map)
+folium.TileLayer('CyclOSM', name="CyclOSM").add_to(map)
+folium.TileLayer('Esri.WorldImagery', name="Esri World Imagery").add_to(map)
+folium.TileLayer('OpenStreetMap', name="OpenStreetMap").add_to(map)
 
 # координаты улиц
 lenina_coordinates = [
@@ -61,13 +60,9 @@ chertigasheva_coordinates = [
     [53.725840, 91.453251],
     [53.725965, 91.454592],
     [53.726027, 91.455169],
-    [53.727406, 91.470149],
-    [53.727426, 91.470695],
-    [53.727422, 91.471099]
 ]
 
 # линии улиц
-# color #FFD30C,#D2B48C,#F0E68C. #ff3300
 html_lenina = '''<h1>Проспект Ленина</h1>
               <img src="https://www.on-walking.com/files/abakan/011.jpg" width="300px" height="200px">  '''
 html_shetinkina = '''<h1>Улица Щетинкина</h1>
@@ -77,28 +72,28 @@ folium.PolyLine(
     color="#ff5200",
     weight=5,
     tooltip="Проспект Ленина",
-    popup=html_lenina, # предложение добавить popup
+    popup=html_lenina,
 ).add_to(map)
 folium.PolyLine(
     locations=shetinkina_coordinates,
     color="#ff5200",
     weight=5,
     tooltip="Улица Щетинкина",
-    popup=html_shetinkina, # предложение добавить popup
+    popup=html_shetinkina,
 ).add_to(map)
 folium.PolyLine(
     locations=krulova_coordinates,
     color="#ff5200",
     weight=5,
     tooltip="Улица Крылова?",
-    popup="Улица Крылова?", # предложение добавить popup
+    popup="Улица Крылова?",
 ).add_to(map)
 folium.PolyLine(
     locations=chertigasheva_coordinates,
     color="#ff5200",
     weight=5,
     tooltip="Улица Чертыгашева",
-    popup="Улица Чертыгашева", # предложение добавить popup
+    popup="Улица Чертыгашева",
 ).add_to(map)
 
 # Тестовые маркеры для карты
@@ -113,7 +108,7 @@ folium.Marker(
     tooltip="Иконка 2",
     popup="Тест2",
     icon=folium.Icon(icon="seedling", prefix="fa", color="green"),
-).add_to(map) # вот этот маркер оставляем
+).add_to(map)
 folium.Marker(
     location=[53.722445, 91.445457],
     tooltip="Иконка 3",
@@ -122,4 +117,5 @@ folium.Marker(
 ).add_to(map)
 
 folium.LayerControl().add_to(map)
+
 map.save("map.html")
