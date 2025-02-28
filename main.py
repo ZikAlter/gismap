@@ -14,6 +14,29 @@ folium.TileLayer('Esri.WorldImagery', name="Esri World Imagery").add_to(m)
 folium.TileLayer('OpenStreetMap', name="OpenStreetMap").add_to(m)
 
 # Тестовые маркеры для карты
+folium.CircleMarker(
+    location=[53.7212, 91.4247],
+    radius=10,
+    fill=True,
+    color="#2c9e03",
+    popup=folium.Popup("Проективное покрытие: 60%<br/>Высота газона: 0.3 см"),
+).add_to(m)
+
+folium.CircleMarker(
+    location=[53.7219, 91.4238],
+    radius=10,
+    fill=True,
+    color="#e82107",
+    popup=folium.Popup("Проективное покрытие: 60%<br/>Высота газона: 0.3 см"),
+).add_to(m)
+
+folium.CircleMarker(
+    location=[53.7202, 91.4242],
+    radius=10,
+    fill=True,
+    color="#fa5e0a",
+    popup=folium.Popup("Проективное покрытие: 60%<br/>Высота газона: 0.3 см"),
+).add_to(m)
 # folium.Marker(
 #     location=[53.721565, 91.436445],
 #     tooltip="Иконка 1",
