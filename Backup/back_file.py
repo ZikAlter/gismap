@@ -25,19 +25,13 @@ folium.TileLayer('OpenStreetMap', name="OpenStreetMap").add_to(m)
 
 # Функция для определения цвета маркера
 def get_marker_color(proj_cover, grass_height):
-    grass_height = float(grass_height)
-
-    if 90 <= proj_cover <= 100 and -5.0 <= grass_height < -2.0:
-        return "darkgreen"  # Отличное состояние
-    if 70 <= proj_cover < 90 or -2.0 <= grass_height <= 0.0:
-        return "green"  # Хорошее состояние
-    if 50 <= proj_cover < 70 or 0.0 < grass_height <= 3.0:
-        return "orange"  # Среднее состояние
-    if 30 <= proj_cover < 50 or 3.0 < grass_height <= 6.0:
-        return "red"  # Плохое состояние
-    if proj_cover < 30 or grass_height > 6.0:
-        return "darkred"  # Ужасное состояние
-    return "gray"  # Неизвестное состояние
+    if proj_cover < 70 or grass_height > 0.5:
+        return "red"
+    elif 70 <= proj_cover <= 80 or (0.3 < grass_height <= 0.5):
+        return "orange"
+    elif proj_cover > 80 and grass_height <= 0.3:
+        return "green"
+    return "gray"
 
 # Группируем данные по улицам
 for street_name in df_markers["street"].unique():
@@ -88,11 +82,11 @@ legend_html = """
 ">
     <b>Легенда</b>
     <br>
-    <i class="fa fa-circle" style="color:darkgreen"></i> Отличное состояние <br>
+    <i class="fa fa-circle" style="color:green"></i> Отличное состояние <br>
     <i class="fa fa-circle" style="color:green"></i> Хорошее состояние <br>
     <i class="fa fa-circle" style="color:orange"></i> Удовлетворительное состояние <br>
     <i class="fa fa-circle" style="color:red"></i> Неудовлетворительное состояние <br>
-    <i class="fa fa-circle" style="color:darkred"></i> Плохое состояние <br>
+    <i class="fa fa-circle" style="color:red"></i> Плохое состояние <br>
 </div>
 """
 
