@@ -29,15 +29,16 @@ def get_marker_color(proj_cover, grass_height):
 
     if 90 <= proj_cover <= 100 and -5.0 <= grass_height < -2.0:
         return "darkgreen"  # Отличное состояние
-    if 70 <= proj_cover < 90 or -2.0 <= grass_height <= 0.0:
+    elif 70 <= proj_cover < 90 or -2.0 <= grass_height <= 0.0:
         return "green"  # Хорошее состояние
-    if 50 <= proj_cover < 70 or 0.0 < grass_height <= 3.0:
+    elif 50 <= proj_cover < 70 or 0.0 < grass_height <= 3.0:
         return "orange"  # Среднее состояние
-    if 30 <= proj_cover < 50 or 3.0 < grass_height <= 6.0:
+    elif 30 <= proj_cover < 50 or 3.0 < grass_height <= 6.0:
         return "red"  # Плохое состояние
-    if proj_cover < 30 or grass_height > 6.0:
+    elif proj_cover < 30 or grass_height > 6.0:
         return "darkred"  # Ужасное состояние
-    return "gray"  # Неизвестное состояние
+    else:
+        return "gray"  # Неизвестное состояние
 
 # Группируем данные по улицам
 for street_name in df_markers["street"].unique():
